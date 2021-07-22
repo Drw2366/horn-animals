@@ -1,4 +1,5 @@
 import React from 'react';
+import{ BsFillHeartFill} from 'react-icons/bs';
 // import black from '..//img/hb2.jpg';
 // another way to import could also use import/from
 //useState: allows us to just render one peice of code 
@@ -12,16 +13,29 @@ function HornedBeast({image_url, title, description}) {
     setCount(count+1);
   };
   //userState(sets beg value)
-  const [count, setCount] = useState(100); 
+  const [count, setCount] = useState(0); 
 
   return (
     <>
       <h2>{title}</h2>
-      <img height="500px" src={image_url} alt="Bird Picture" title="Bird Pic"/>;
+      <button>
+        <img 
+          onClick={handleClick}
+          height="500px" 
+          src={image_url} 
+          alt="Bird Picture" 
+          title="Bird Pic"
+        />
+        <BsFillHeartFill/>
+        {/* <div height="500px" width="500px" style={{backgroundImage:`url(${image_url})`}>
+
+        </div> */}
+        {count}
+      </button>
       <p>{description}</p>
 
 
-      <button onClick={handleClick}> Favorite {count} </button>
+      
     </>
 
     
