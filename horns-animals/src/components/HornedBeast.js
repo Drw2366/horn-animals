@@ -1,5 +1,8 @@
 import React from 'react';
 import{ BsFillHeartFill} from 'react-icons/bs';
+import Image from 'react-bootstrap/Image';
+import Button from 'react-bootstrap/Button';
+import {Container, Row, Col} from 'react-bootstrap';
 // import black from '..//img/hb2.jpg';
 // another way to import could also use import/from
 //useState: allows us to just render one peice of code 
@@ -17,27 +20,31 @@ function HornedBeast({image_url, title, description}) {
 
   return (
     <>
-      <h2>{title}</h2>
-      <button>
-        <img 
-          onClick={handleClick}
-          height="500px" 
-          src={image_url} 
-          alt="Bird Picture" 
-          title="Bird Pic"
-        />
-        <BsFillHeartFill/>
-        {/* <div height="500px" width="500px" style={{backgroundImage:`url(${image_url})`}>
+      <Container>
+        <Row>
+          <Col xs={12}>
+            <Button className='bg-transparent border-0'>
+              <Image
+                src={image_url}
+                atl={title} 
+                onClick={handleClick}
+                className='img-fluid'
+              />
+            </Button>
+          </Col>
+          //
+          <Col xs={12}>
+            <Col><BsFillHeartFill/></Col>
+            <Col>{count}</Col>
+          </Col>
+        </Row>
+        <Row>
+          <Col ><h2 xs={12}>{title}</h2></Col>
+          <Col><p>{description}</p></Col>
+        </Row>
 
-        </div> */}
-        {count}
-      </button>
-      <p>{description}</p>
-
-
-      
+      </Container>
     </>
-
     
       
       
