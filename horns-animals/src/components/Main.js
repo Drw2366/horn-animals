@@ -1,7 +1,7 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
-import Peacock from '../img/peacock-90051_1920.jpg';
-import Car from '../img/car-49278_1920.jpg';
+import {useState} from 'react';
+import {Container, Row, Col, Dropdown} from 'react-bootstrap';
 
 function Main({animalData}) {
   let filterArray = [1, 2, 3, 100];

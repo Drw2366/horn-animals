@@ -3,6 +3,8 @@ import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './components/Main';
+import {animalData} from './data.js';
+
 
 
 
@@ -10,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Main/>
+      <Main animalData = {animalData}/>
       <Footer/>
       
       
@@ -31,6 +33,10 @@ function App() {
       </header> */}
     </div>
   );
+
+
 }
+
+
 
 export default App;

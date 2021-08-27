@@ -2,10 +2,11 @@ import React from 'react';
 
 
 function Footer() {
-  return 
+  return(
     <footer>
       <p>Dondre West</p>
-    </footer>;
+    </footer>
+  );
 }
 
 export default Footer;
